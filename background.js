@@ -5,15 +5,15 @@ var Background = (function() {
   /* =================== private methods ================= */
   // cache DOM elements
   function cacheDom() {
-    DOM.$background = $('#background');
+    DOM.$background = $('body');
   }
 
   // coordinate async assembly of image element and rendering
   function loadImage() {
-    var baseUrl = 'https://source.unsplash.com/';
-    var feature = 'daily',
+    var baseUrl = 'https://source.unsplash.com/1600x900/?';
+    var feature = 'storm',
         cat    = 'water';
-    buildElement(baseUrl +feature + '?' + cat)
+    buildElement(baseUrl +feature+',' + cat)
       .then(render);
   }
 
